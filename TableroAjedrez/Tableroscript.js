@@ -11,6 +11,13 @@ generar = () => {
       } else {
         casilla.classList.add("casilla-negra");
       }
+      // Creación de elemento para generar imagen
+      const Cimagen = document.createElement("img");
+      if (fila === 1 || fila === 3) {
+        Cimagen.src = "Peon.png";
+      }
+      Cimagen.classList.add("EstiloImagen");
+      casilla.appendChild(Cimagen);
     }
     tablero.appendChild(filaElemento);
   }
