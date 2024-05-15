@@ -2,8 +2,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 700px;
-  background: linear-gradient(to right, #667eea, #764ba2);
+  height: 650px;
+  background: linear-gradient(to left, #667eea, #764ba2);
 }
 
 .Div-Contenedor-General,
@@ -12,17 +12,15 @@ h1 {
 }
 
 .div-Container-Reloj {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 3rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3em;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
   padding: 20px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2)
 }
 
 .div-Numeros {
-  color: #fff;
+  color: darkblue;
   letter-spacing: 10px; /* Espaciado entre los dígitos */
 }
