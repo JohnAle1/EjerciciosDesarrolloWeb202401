@@ -1,10 +1,10 @@
 function updateTime() {
-  const now = new Date();
-  const hours = String(now.getHours()).padStart(2, "0");
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-  const seconds = String(now.getSeconds()).padStart(2, "0");
-  const timeString = `${hours}:${minutes}:${seconds}`;
-  document.getElementById("relojelemento").textContent = timeString;
+  const hora = new Date();
+  const horas = String(hora.getHours()).padStart(2, "0");
+  const minutos = String(hora.getMinutes()).padStart(2, "0");
+  const segundos = String(hora.getSeconds()).padStart(2, "0");
+  const ResultadoTiempo = `${horas}:${minutos}:${segundos}`;
+  document.getElementById("relojelemento").textContent = ResultadoTiempo;
 }
 //Frecuencia de actualizacion de tiempo
 setInterval(updateTime, 1000);
