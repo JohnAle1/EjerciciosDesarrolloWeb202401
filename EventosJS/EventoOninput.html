@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento oninput</title>
+</head>
+<body>
+    <input type="text" id="miInput" placeholder="Escribe algo aquí">
+    <p id="mensaje"></p>
+
+    <script>
+        const input = document.getElementById('miInput');
+        const mensaje = document.getElementById('mensaje');
+
+        input.oninput = function() {
+            mensaje.textContent = "Has escrito: " + input.value;
+        }
+    </script>
+</body>
+</html>

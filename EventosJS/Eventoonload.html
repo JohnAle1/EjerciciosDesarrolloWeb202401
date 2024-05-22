@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onload</title>
+</head>
+<body>
+    <p id="mensaje">Esperando a que se cargue la página...</p>
+
+    <script>
+        window.onload = function() {
+            const mensaje = document.getElementById('mensaje');
+            setTimeout(function() {
+                mensaje.textContent = "¡La página se ha cargado completamente y han pasado 3 segundos!";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

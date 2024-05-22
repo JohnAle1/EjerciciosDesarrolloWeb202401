@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento over y out</title>
+</head>
+<body>
+    <div id="miDiv" style="width: 200px; height: 200px; background-color: lightblue;">Juega con el ratón</div>
+    <p id="mensaje"></p>
+
+    <script>
+        const div = document.getElementById('miDiv');
+        const mensaje = document.getElementById('mensaje');
+
+        div.onmouseover = function() {
+            mensaje.textContent = "El ratón está sobre el div.";
+        }
+
+        div.onmouseout = function() {
+            mensaje.textContent = "El ratón salió del div.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos de teclado</title>
+</head>
+<body>
+    <input type="text" id="miInput" placeholder="Presiona una tecla">
+    <p id="mensaje"></p>
+
+    <script>
+        const input = document.getElementById('miInput');
+        const mensaje = document.getElementById('mensaje');
+
+        input.onkeydown = function(event) {
+            mensaje.textContent = "Tecla presionada: " + event.key;
+        }
+
+        input.onkeypress = function(event) {
+            mensaje.textContent = "Tecla presionada y mantenida: " + event.key;
+        }
+
+        input.onkeyup = function(event) {
+            mensaje.textContent = "Tecla liberada: " + event.key;
+        }
+    </script>
+</body>
+</html>

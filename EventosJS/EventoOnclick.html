@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onclick</title>
+</head>
+<body>
+    <button id="miBoton">Haz clic en mí</button>
+    <p id="mensaje"></p>
+
+    <script>
+        // Seleccionamos el botón y el párrafo
+        const boton = document.getElementById('miBoton');
+        const mensaje = document.getElementById('mensaje');
+
+        // Añadimos un listener al evento 'click'
+        boton.onclick = function() {
+            mensaje.textContent = "¡Has hecho clic en el botón!";
+        }
+    </script>
+</body>
+</html>

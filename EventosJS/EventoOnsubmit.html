@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onsubmit</title>
+</head>
+<body>
+    <form id="miFormulario">
+        <input type="text" name="nombre" placeholder="Nombre">
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="mensaje"></p>
+
+    <script>
+        const formulario = document.getElementById('miFormulario');
+        const mensaje = document.getElementById('mensaje');
+
+        formulario.onsubmit = function(event) {
+            event.preventDefault(); // Previene el envío del formulario
+            const nombre = formulario.nombre.value;
+            mensaje.textContent = "Formulario enviado. Nombre: " + nombre;
+        }
+    </script>
+</body>
+</html>

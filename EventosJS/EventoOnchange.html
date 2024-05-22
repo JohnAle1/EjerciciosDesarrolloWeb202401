@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onchange</title>
+</head>
+<body>
+    <select id="miSelect">
+        <option value="opcion1">Opción 1</option>
+        <option value="opcion2">Opción 2</option>
+        <option value="opcion3">Opción 3</option>
+    </select>
+    <p id="mensaje"></p>
+
+    <script>
+        const select = document.getElementById('miSelect');
+        const mensaje = document.getElementById('mensaje');
+
+        select.onchange = function() {
+            mensaje.textContent = "Opción seleccionada: " + select.value;
+        }
+    </script>
+</body>
+</html>

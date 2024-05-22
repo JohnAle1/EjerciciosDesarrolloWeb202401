@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrusel</title>
+    <style>
+      .container-caru {
+        width: 80%;
+        margin: 20px auto;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .div-clas-pas {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-caru">
+      <div class="div-clas-pas">Dato 1</div>
+      <div class="div-clas-pas">Dato 2</div>
+      <div class="div-clas-pas">Dato 3</div>
+    </div>
+    <button id="prevBtn">Anterior</button>
+    <button id="nextBtn">Siguiente</button>
+
+    <script>
+      let IndexPaso = 0;
+      const Contenedores = document.querySelectorAll(".div-clas-pas");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      function mostrarPaso(index) {
+        Contenedores.forEach((testimonial) => {
+          testimonial.style.transform = `translateX(-${index * 100}%)`;
+        });
+      }
+
+      prevBtn.addEventListener("click", () => {
+        if (IndexPaso > 0) {
+          IndexPaso--;
+        }
+        mostrarPaso(IndexPaso);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        if (IndexPaso < Contenedores.length - 1) {
+          IndexPaso++;
+        }
+        mostrarPaso(IndexPaso);
+      });
+
+      mostrarPaso(IndexPaso);
+    </script>
+  </body>
+</html>

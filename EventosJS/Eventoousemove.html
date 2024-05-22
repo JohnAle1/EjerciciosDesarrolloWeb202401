@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onmousemove</title>
+    <style>
+        #caja {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="caja"></div>
+    <p id="mensaje"></p>
+
+    <script>
+        const caja = document.getElementById('caja');
+        const mensaje = document.getElementById('mensaje');
+
+        caja.onmousemove = function(event) {
+            mensaje.textContent = `Posición del cursor - X: ${event.clientX}, Y: ${event.clientY}`;
+        }
+    </script>
+</body>
+</html>
