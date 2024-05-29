@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento onclick</title>
+    <style>
+        body.color1 {
+            background-color: lightblue;
+        }
+        body.color2 {
+            background-color: lightgreen;
+        }
+        body.color3 {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <button id="miBoton">Haz clic en mí</button>
+
+    <script>
+        // Seleccionamos el botón
+        const boton = document.getElementById('miBoton');
+
+        // Lista de clases de colores
+        const colores = ['color1', 'color2', 'color3'];
+        let indiceColor = 0;
+
+        // Añadimos un listener al evento 'click'
+        boton.onclick = function() {
+            // Remover la clase actual
+            document.body.classList.remove(colores[indiceColor]);
+
+            // Incrementar el índice para la siguiente clase
+            indiceColor = (indiceColor + 1) % colores.length;
+
+            // Añadir la nueva clase
+            document.body.classList.add(colores[indiceColor]);
+        }
+    </script>
+</body>
+</html>
