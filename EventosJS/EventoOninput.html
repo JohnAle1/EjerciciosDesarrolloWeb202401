@@ -11,8 +11,13 @@
     <script>
         const input = document.getElementById('miInput');
         const mensaje = document.getElementById('mensaje');
-
+        // A traves de metodos
         input.oninput = function() {
+            mensaje.textContent = "Has escrito: " + input.value;
+        }
+        // A traves de eventos
+        input.addEventListener('input', teclado1);
+        function teclado1() {
             mensaje.textContent = "Has escrito: " + input.value;
         }
     </script>
